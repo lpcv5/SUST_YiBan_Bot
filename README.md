@@ -1,0 +1,2 @@
+# SUST_YiBan_Bot
+使用python自动化脚本来完成一些列操作
