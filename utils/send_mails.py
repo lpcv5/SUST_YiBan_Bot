@@ -5,7 +5,7 @@ from email.header import Header
 from smtplib import SMTP_SSL
 
 
-def send_result(result):
+def send_result(result, receiver):
     # qq邮箱smtp服务器
     host_server = 'smtp.qq.com'
     # sender_qq为发件人的qq号码
@@ -15,7 +15,7 @@ def send_result(result):
     # 发件人的邮箱
     sender_qq_mail = '1830910357@qq.com'
     # 收件人邮箱
-    receiver = '1830910357@qq.com'
+    receiver = receiver
 
     # 邮件的正文内容
     mail_content = result

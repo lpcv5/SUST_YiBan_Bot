@@ -39,11 +39,12 @@ def show_service_state():
 
 
 def add_user():
-    print("请依次输入要添加的账户、密码、信息上报地址")
+    print("请依次输入要添加的账户、密码、信息上报地址、上报结果通知邮件")
     account = input()
     passwd = input()
     address = input()
-    Sql.add_user(Sql(), account, passwd, address)
+    mail = input()
+    Sql.add_user(Sql(), account, passwd, address, mail)
 
 
 def main():
