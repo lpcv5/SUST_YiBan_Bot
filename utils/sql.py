@@ -15,16 +15,16 @@ class Sql:
         print(result)
         return result[0]
 
-    def add_user(self, account, passwd, address):
+    def add_user(self, account, passwd, address, mail):
         cur = self.con.cursor()
-        cur.execute('INSERT INTO user (user_id, account, passwd, address) VALUES(NULL , "%s", "%s", "%s")' % (
-            account, passwd, address))
+        cur.execute('INSERT INTO user (user_id, account, passwd, address) VALUES(NULL , "%s", "%s", "%s", "%s")' % (
+            account, passwd, address, mail))
         self.con.commit()
         print("用户"+ account +"添加成功")
 
-    def update_user(self, address):
+    def update_user(self, address, account):
         cur = self.con.cursor()
-        cur.execute('UPDATE user SET address = "%s"'%(address))
+        cur.execute('UPDATE user SET address = "%s" WHERE account = "%s"'%(address, account))
         self.con.commit()
 
     def list_user(self):
@@ -33,6 +33,13 @@ class Sql:
         result = cur.fetchall()
         # print(result)
         return result
+
+    def delete_user(self, account):
+        cur = self.con.cursor()
+        cur.execute('DELETE FROM user WHERE account = "%s"' % (account))
+        self.con.commit()
+        if self.query_user(account) is None:
+            return True
 # con = sqlite3.connect(getpath() + '/database/user.db3')
 # cur = con.cursor()
 # cur.execute(

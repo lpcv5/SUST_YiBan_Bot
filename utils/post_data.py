@@ -3,6 +3,7 @@ import requests.sessions
 
 def post_check_data(ssid, captcha, uniqid, address):
     url = 'http://yiban.sust.edu.cn/v4/public/index.php/index/formtime/add.html'
+    
     param = {
         "desgin_id": 25,
         "list_id": 12,
