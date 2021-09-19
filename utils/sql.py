@@ -10,7 +10,7 @@ class Sql:
     # 根据account查询passwd
     def query_user(self, account):
         cur = self.con.cursor()
-        cur.execute('SELECT * FROM user WHERE account==' + str(account))
+        cur.execute('SELECT * FROM user WHERE account=' + str(account))
         result = cur.fetchall()
         print(result)
         return result[0]
@@ -34,12 +34,11 @@ class Sql:
         # print(result)
         return result
 
-    def delete_user(self, account):
+    def delete_user(self, id):
         cur = self.con.cursor()
-        cur.execute('DELETE FROM user WHERE account = "%s"' % (account))
+        cur.execute('DELETE FROM user WHERE user_id = "%s"' % (id))
         self.con.commit()
-        if self.query_user(account) is None:
-            return True
+        return True
 # con = sqlite3.connect(getpath() + '/database/user.db3')
 # cur = con.cursor()
 # cur.execute(

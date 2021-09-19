@@ -66,8 +66,8 @@ def manage_user():
 
 
 def delete_user():
-    account = input('请输入删除的账户名称')
-    if Sql.delete_user(Sql(), account):
+    id = input('请输入删除的id')
+    if Sql.delete_user(Sql(), id):
         print('删除成功')
 
 
