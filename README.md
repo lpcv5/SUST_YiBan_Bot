@@ -41,3 +41,4 @@ python main.py
 
 
 ## P.S. 之后会上线微信公众号版本的，直接在微信公众号里面进行操作
+## 如果有问题 欢迎邮件联系lpengcheng149@gmail.com 或者pull issues
