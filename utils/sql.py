@@ -39,11 +39,3 @@ class Sql:
         cur.execute('DELETE FROM user WHERE user_id = "%s"' % (id))
         self.con.commit()
         return True
-# con = sqlite3.connect(getpath() + '/database/user.db3')
-# cur = con.cursor()
-# cur.execute(
-#     'CREATE TABLE user (user_id INTEGER PRIMARY KEY, account varchar(20), passwd varchar(25), address varchar(50))')
-# con.commit()
-#
-# Sql.add_user(Sql(), 1869653680, '1489753lpc', '陕西省西安市未央区白桦林国际')
-# print(Sql.query_user(Sql(), 18696536980))
