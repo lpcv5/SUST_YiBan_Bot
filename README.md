@@ -4,6 +4,29 @@
 部署到服务器上，可利用cron定时任务运行
 验证码采用了自己服务器的api来进行识别
 
+## 项目结构
+
+```
+├─ auto_check_service.py						# 自动晨午检服务
+├─ database										# 用户的打卡数据库
+│ 	└─ user.db3
+├─ main.py										# 晨午检的数据管理
+├─ mdimg
+│ 	├─ Snipaste_2021-09-19_12-05-34.png			
+│ 	└─ Snipaste_2021-09-19_12-11-35.png
+├─ README.md
+├─ requirements.txt
+├─ util.py										# 获取 ssid 的工具模块
+└─ utils
+	├─ captcha.py								# 获取验证码，并对验证码进行识别
+	├─ login.py									# 登陆获取 cookies 模块
+	├─ post_data.py								# 信息上报数据提交模块
+	└─ sql.py									# 数据库 CRUD 模块
+
+```
+
+
+
 ## 使用方法
 
 

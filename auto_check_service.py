@@ -2,7 +2,7 @@ import time
 import traceback
 
 import util
-from utils import captcha, post_data, send_mails
+from utils import captcha, post_data
 from utils.sql import Sql
 
 
@@ -26,8 +26,6 @@ def auto_check():
                 pass
         except Exception as e:
             err = {'err': e.args, 'traceback': traceback.format_exc()}
-            send_mails.send_result(account + "打卡过程中发生错误，错误信息为：" + str(err), '1830910357@qq.com')
-
             time.sleep(30)
 
 
