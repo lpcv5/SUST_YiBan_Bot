@@ -7,12 +7,12 @@
 ## 项目结构
 
 ```
-├─ auto_check_service.py						# 在这里面填入你的登陆信息一键晨午检
+├─ auto_check_service.py				# 在这里面填入你的登陆信息一键晨午检
 ├─ README.md
 ├─ requirements.txt
-├─ util.py										# 和登陆有关的模块
+├─ util.py										  # 和登陆有关的模块
 ├─ captcha.py								    # 获取验证码，并对验证码进行识别
-└─ post_data.py								    # 信息上报数据提交模块
+└─ post_data.py								  # 信息上报数据提交模块
 
 
 
@@ -48,13 +48,8 @@ python main.py
 
 ​	如果你是在windows上使用，可以参照这篇文章[使用Windows任务计划自动运行Python程序_若如初见-CSDN博客_任务计划程序运行python脚本](https://blog.csdn.net/Artificial_idiots/article/details/108570387)
 
-​	如果你是部署到自己的linux服务器上，直接使用crontab脚本自动执行
+​	如果你是部署到自己的linux服务器上，直接使用crond脚本自动执行
 
 
 
-每次打卡之后，相应的打卡信息会发送到你添加个人信息时的邮箱中
-
-
-
-## P.S. 之后会上线微信公众号版本的，直接在微信公众号里面进行操作
 ## 如果有问题 欢迎邮件联系lpengcheng149@gmail.com 或者 issues
