@@ -2,31 +2,27 @@ import time
 import traceback
 
 import util
-from utils import captcha, post_data
-from utils.sql import Sql
+import post_data
+import captcha
 
 
+# 分别填入你的账号密码以及要提交的地址
 def auto_check():
-    userList = Sql.list_user(Sql())
-    for i in userList:
-        account = i[1]
-        passwd = i[2]
-        address = i[3]
-        mail = i[4]
-        # print(account,passwd,address)
-        try:
-            ssid = util.getssid(account, passwd)
-            captchas = captcha.get_yzm(ssid)
-            result = post_data.post_check_data(ssid, captchas[1], captchas[0], address)
-            if int(result['code']) == 1:
-                # send_mails.send_result(account+"打卡成功，第一次使用建议检查结果", mail)
-                print(1)
-            else:
-                # send_mails.send_result(account + "打卡失败，请联系我", mail)
-                pass
-        except Exception as e:
-            err = {'err': e.args, 'traceback': traceback.format_exc()}
-            time.sleep(30)
+    account = ""
+    passwd = ""
+    address = ""
+    print(account, passwd, address)
+    try:
+        ssid = util.getssid(account, passwd)
+        captchas = captcha.get_yzm(ssid)
+        result = post_data.post_check_data(ssid, captchas[1], captchas[0], address)
+        if int(result['code']) == 1:
+            print(1)
+        else:
+            pass
+    except Exception as e:
+        err = {'err': e.args, 'traceback': traceback.format_exc()}
+        print(str(err))
 
 
 if __name__ == "__main__":

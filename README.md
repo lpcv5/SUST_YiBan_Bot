@@ -7,21 +7,14 @@
 ## 项目结构
 
 ```
-├─ auto_check_service.py						# 自动晨午检服务
-├─ database										# 用户的打卡数据库
-│ 	└─ user.db3
-├─ main.py										# 晨午检的数据管理
-├─ mdimg
-│ 	├─ Snipaste_2021-09-19_12-05-34.png			
-│ 	└─ Snipaste_2021-09-19_12-11-35.png
+├─ auto_check_service.py						# 在这里面填入你的登陆信息一键晨午检
 ├─ README.md
 ├─ requirements.txt
-├─ util.py										# 获取 ssid 的工具模块
-└─ utils
-	├─ captcha.py								# 获取验证码，并对验证码进行识别
-	├─ login.py									# 登陆获取 cookies 模块
-	├─ post_data.py								# 信息上报数据提交模块
-	└─ sql.py									# 数据库 CRUD 模块
+├─ util.py										# 和登陆有关的模块
+├─ captcha.py								    # 获取验证码，并对验证码进行识别
+└─ post_data.py								    # 信息上报数据提交模块
+
+
 
 ```
 
