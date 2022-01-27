@@ -7,12 +7,12 @@
 ## 项目结构
 
 ```
-├─ auto_check_service.py				# 在这里面填入你的登陆信息一键晨午检
+├─ auto_check_service.py				        # 在这里面填入你的登陆信息一键晨午检
 ├─ README.md
 ├─ requirements.txt
-├─ util.py										  # 和登陆有关的模块
-├─ captcha.py								    # 获取验证码，并对验证码进行识别
-└─ post_data.py								  # 信息上报数据提交模块
+├─ util.py										          # 和登陆有关的模块
+├─ captcha.py								            # 获取验证码，并对验证码进行识别
+└─ post_data.py								          # 信息上报数据提交模块
 
 
 
