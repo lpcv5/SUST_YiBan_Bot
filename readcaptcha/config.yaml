@@ -1,0 +1,55 @@
+RequestDef:
+  InputData: image
+  ModelName: model_name
+ResponseDef:
+  Message: message
+  StatusBool: success
+  StatusCode: code
+  Uid: uid
+RouteMap:
+- Class: AuthHandler
+  Route: /captcha/auth/v2
+- Class: NoAuthHandler
+  Route: /captcha/v1
+- Class: SimpleHandler
+  Route: /captcha/v3
+- Class: HeartBeatHandler
+  Route: /check_backend_active.html
+- Class: HeartBeatHandler
+  Route: /verification
+- Class: HeartBeatHandler
+  Route: /
+- Class: ServiceHandler
+  Route: /service/info
+- Class: FileHandler
+  Param:
+    path: logs
+  Route: /service/logs/(.*)
+- Class: BaseHandler
+  Route: .*
+Security:
+  AccessKey: ''
+  SecretKey: ''
+System:
+  BlacklistTriggerTimes: -1
+  DefaultModel: default
+  DefaultPort: 19952
+  ErrorMessage:
+    400: Bad Request
+    401: Unicode Decode Error
+    403: Forbidden
+    404: 404 Not Found
+    405: Method Not Allowed
+    500: Internal Server Error
+  ExceededMessage: Illegal access time, please request in open hours.
+  GlobalRequestCountInterval: 86400
+  GlobalRequestLimit: -1
+  IllegalTimeMessage: The maximum number of requests has been exceeded.
+  RequestCountInterval: 86400
+  RequestLimit: -1
+  RequestSizeLimit: {}
+  SavePath: ''
+  SplitFlag: !!binary |
+    mZmZAP//OTk5OTk5Li4uLi4uLi4uOTk5OTn/AJmZmQ==
+  Whitelist: false
+  WithoutLogger: false
