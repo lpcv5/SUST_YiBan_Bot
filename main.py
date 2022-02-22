@@ -37,5 +37,7 @@ if __name__ == '__main__':
             auto_check(acc, token, address, captchacheck)
         else:
             print('更新token')
-            data['user'][ID]['token'] = util.get_token(acc, passwd)
+            token = util.get_token(acc, passwd)
+            data['user'][ID]['token'] = token
             util.write_account_token(data)
+            auto_check(acc, token, address, captchacheck)
