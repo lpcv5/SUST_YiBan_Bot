@@ -41,11 +41,11 @@
 
 ```
 root:[./]
-+--account.yaml # 账号存储配置文件
-+--captcha.py # 调用 readcaptcha 目录中的模型对进行验证码识别
-+--main.py  # 主程序
-+--post_data.py # 晨午检数据提交
-+--readcaptcha  # tensorflow 识别验证码核心
++--account.yaml     # 账号存储配置文件
++--captcha.py     # 调用 readcaptcha 目录中的模型对进行验证码识别
++--main.py      # 主程序
++--post_data.py     # 晨午检数据提交
++--readcaptcha      # tensorflow 识别验证码核心
 |      +--captch_crack_service.py
 |      +--categorys.py
 |      +--config.py
@@ -75,7 +75,7 @@ root:[./]
 |      +--utils.py
 +--README.md
 +--requirements.txt
-+--util.py  # 登录接口相关工具
++--util.py      # 登录接口相关工具
 ```
 
 
