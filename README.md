@@ -1,3 +1,5 @@
+# 旧的时代已过去，新的时代已到来，谨以此项目记录曾经的大学生活和打卡时光
+
 # SUST_YiBan_Bot
 
 使用python自动化脚本来完成一些列操作
@@ -97,9 +99,3 @@ pip install -r requirements.txt
 ```py
 python main.py
 ```
-
-
-
-
-
-## 如果有问题 欢迎邮件联系lpengcheng149@gmail.com 或者 issues
